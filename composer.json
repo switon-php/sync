@@ -1,0 +1,59 @@
+{
+    "name": "switon/sync",
+    "description": "In-process channels, mutexes, wait groups, and stacks for coroutine-aware coordination for Switon Framework",
+    "type": "library",
+    "keywords": [
+        "switon",
+        "synchronization",
+        "mutex",
+        "channels"
+    ],
+    "homepage": "https://github.com/switon-php/sync",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "switon",
+            "email": "admin@switon.dev"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/switon-php/sync",
+        "issues": "https://github.com/switon-php/sync/issues",
+        "docs": "https://docs.switon.dev/latest/sync"
+    },
+    "require": {
+        "php": ">=8.3",
+        "switon/core": "^1.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "switon/testing": "^1.0",
+        "phpstan/extension-installer": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "switon/composer-extra": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Switon\\Sync\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Switon\\Sync\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "@php vendor/bin/phpstan analyse",
+        "test:unit": "@php vendor/bin/phpunit --configuration tests/phpunit.xml.dist --testsuite=unit --display-deprecations --display-phpunit-notices",
+        "test": "@php vendor/bin/phpunit --configuration tests/phpunit.xml.dist --testsuite=all --display-deprecations --display-phpunit-notices"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-dev": "1.0.x-dev"
+        }
+    }
+}
