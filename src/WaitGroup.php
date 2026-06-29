@@ -16,7 +16,7 @@ use Swoole\Coroutine\Channel as SwooleChannel;
  *
  * Use when one caller must block until all registered tasks call done().
  *
- * Guidance: only one coroutine may wait on the same instance at a time; non-coroutine mode cannot block with pending tasks.
+ * Guidance: only one coroutine may wait on the same instance at a time; non-coroutine mode cannot block with pending tasks; call <code>add()</code> with <code>delta >= 1</code> (including <code>WaitGroup::of()</code>).
  *
  * @see \Switon\Sync\WaitGroupInterface
  * @see \Switon\Sync\Exception\WaitTimeoutException
@@ -53,6 +53,11 @@ class WaitGroup implements WaitGroupInterface
         return $wg;
     }
 
+    /**
+     * Increments the task counter.
+     *
+     * @param int $delta Number of tasks to add (must be >= 1)
+     */
     public function add(int $delta = 1): void
     {
         if ($delta < 1) {
