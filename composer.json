@@ -36,6 +36,11 @@
             "phpstan/extension-installer": true
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-dev": "1.0.x-dev"
+        }
+    },
     "autoload": {
         "psr-4": {
             "Switon\\Sync\\": "src/"
@@ -50,10 +55,5 @@
         "phpstan": "@php vendor/bin/phpstan analyse",
         "test:unit": "@php vendor/bin/phpunit --configuration tests/phpunit.xml.dist --testsuite=unit --display-deprecations --display-phpunit-notices",
         "test": "@php vendor/bin/phpunit --configuration tests/phpunit.xml.dist --testsuite=all --display-deprecations --display-phpunit-notices"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-dev": "1.0.x-dev"
-        }
     }
 }

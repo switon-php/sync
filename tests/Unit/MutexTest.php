@@ -7,7 +7,7 @@ namespace Switon\Sync\Tests\Unit;
 use Switon\Sync\Exception\ChannelEmptyException;
 use Switon\Sync\Lock;
 use Switon\Sync\Mutex;
-use Switon\Sync\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
 class MutexTest extends TestCase

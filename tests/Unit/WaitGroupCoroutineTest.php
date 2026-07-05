@@ -7,7 +7,7 @@ namespace Switon\Sync\Tests\Unit;
 use Switon\Core\Runtime;
 use Switon\Sync\Exception\WaitGroupConcurrentException;
 use Switon\Sync\Exception\WaitTimeoutException;
-use Switon\Sync\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use Switon\Sync\WaitGroup;
 use Throwable;
 
@@ -21,7 +21,6 @@ class WaitGroupCoroutineTest extends TestCase
 {
     protected function setUp(): void
     {
-        parent::setUp();
 
         if (!extension_loaded('swoole')) {
             $this->markTestSkipped('Swoole extension is required for coroutine tests');

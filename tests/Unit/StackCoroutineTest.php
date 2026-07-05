@@ -6,7 +6,7 @@ namespace Switon\Sync\Tests\Unit;
 
 use Switon\Core\Runtime;
 use Switon\Sync\Stack;
-use Switon\Sync\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Coroutine-mode tests for Stack.
@@ -18,7 +18,6 @@ class StackCoroutineTest extends TestCase
 {
     protected function setUp(): void
     {
-        parent::setUp();
 
         if (!extension_loaded('swoole')) {
             $this->markTestSkipped('Swoole extension is required for coroutine tests');

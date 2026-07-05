@@ -6,7 +6,7 @@ namespace Switon\Sync\Tests\Unit;
 
 use Switon\Core\Runtime;
 use Switon\Sync\Mutex;
-use Switon\Sync\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Coroutine-mode tests for Mutex.
@@ -15,7 +15,6 @@ class MutexCoroutineTest extends TestCase
 {
     protected function setUp(): void
     {
-        parent::setUp();
 
         if (!extension_loaded('swoole')) {
             $this->markTestSkipped('Swoole extension is required for coroutine tests');

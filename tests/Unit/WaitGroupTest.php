@@ -7,7 +7,7 @@ namespace Switon\Sync\Tests\Unit;
 use Switon\Core\Exception\InvalidArgumentException;
 use Switon\Core\Exception\MisuseException;
 use Switon\Sync\Exception\WaitTimeoutException;
-use Switon\Sync\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use Switon\Sync\WaitGroup;
 
 class WaitGroupTest extends TestCase
