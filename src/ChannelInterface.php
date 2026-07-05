@@ -56,8 +56,7 @@ interface ChannelInterface
      * After closing, push() throws ChannelClosedException. Pop() continues
      * returning remaining items; once empty, throws ChannelClosedException.
      * In coroutine mode, blocked pop() calls are woken and receive the exception.
-     *
-     * @throws ChannelClosedException If already closed
+     * Idempotent: calling close() on an already closed channel is a no-op.
      */
     public function close(): void;
 

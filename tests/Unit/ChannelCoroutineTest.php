@@ -7,7 +7,7 @@ namespace Switon\Sync\Tests\Unit;
 use Switon\Core\Runtime;
 use Switon\Sync\Channel;
 use Switon\Sync\Exception\ChannelClosedException;
-use Switon\Sync\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use Throwable;
 
 /**
@@ -20,7 +20,6 @@ class ChannelCoroutineTest extends TestCase
 {
     protected function setUp(): void
     {
-        parent::setUp();
 
         if (!extension_loaded('swoole')) {
             $this->markTestSkipped('Swoole extension is required for coroutine tests');

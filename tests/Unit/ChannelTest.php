@@ -8,7 +8,7 @@ use Switon\Sync\Channel;
 use Switon\Sync\Exception\ChannelClosedException;
 use Switon\Sync\Exception\ChannelEmptyException;
 use Switon\Sync\Exception\ChannelFullException;
-use Switon\Sync\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class ChannelTest extends TestCase
 {
@@ -231,15 +231,17 @@ class ChannelTest extends TestCase
         $channel->pop();
     }
 
-    public function testDoubleCloseThrowsException(): void
+    public function testDoubleCloseIsNoOp(): void
     {
         // Arrange
         $channel = new Channel(1);
         $channel->close();
 
-        // Act & Assert
-        $this->expectException(ChannelClosedException::class);
+        // Act — must be idempotent for termination broadcasts
         $channel->close();
+
+        // Assert
+        $this->assertTrue($channel->isClosed());
     }
 
     public function testPopThrowsClosedBeforeEmptyException(): void

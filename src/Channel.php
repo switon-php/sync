@@ -25,7 +25,7 @@ use Swoole\Coroutine\Channel as SwooleChannel;
  * @see \Switon\Sync\Exception\ChannelEmptyException
  * @see \Switon\Sync\Exception\ChannelClosedException
  */
-class Channel implements ChannelInterface
+class Channel implements ChannelInterface, CloseableInterface
 {
     protected int $capacity;
     protected int $length;
@@ -127,7 +127,7 @@ class Channel implements ChannelInterface
     public function close(): void
     {
         if ($this->closed) {
-            ChannelClosedException::raise('Channel is already closed');
+            return;
         }
 
         $this->closed = true;
