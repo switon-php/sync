@@ -6,7 +6,7 @@
 
 - [Sync Package](README.md) — usage, primitive selection, and common boundaries
 - [FAQ](faq.md#sync-faq) — short answers for runtime behavior and edge cases
-- [Pool Package](../../pool/docs/README.md) — borrow/return lifecycle when `Stack` is not enough
+- [Pool Package](https://github.com/switon-php/pool/blob/main/docs/README.md) — borrow/return lifecycle when `Stack` is not enough
 
 ---
 
@@ -42,7 +42,7 @@ Coroutine runtimes can suspend. Non-coroutine runtimes cannot.
 
 `Stack` is only a bounded container with LIFO reuse.
 
-Borrow/return lifecycle, owner scoping, and resource management belong to [Pool](../../pool/docs/README.md). Keeping that boundary separate avoids turning a simple reuse primitive into a pool manager.
+Borrow/return lifecycle, owner scoping, and resource management belong to [Pool](https://github.com/switon-php/pool/blob/main/docs/README.md). Keeping that boundary separate avoids turning a simple reuse primitive into a pool manager.
 
 ## Deliberate Simplicity {#deliberate-simplicity}
 

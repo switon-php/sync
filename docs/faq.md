@@ -12,7 +12,7 @@ Use `Channel` for ordered handoff, `Mutex` for exclusive access, `WaitGroup` for
 
 ### Should I use `Stack` for pooling? {#stack-for-pooling}
 
-Only if you want a bare LIFO container. If you need borrow/return lifecycle, use [Pool](../../pool/docs/README.md).
+Only if you want a bare LIFO container. If you need borrow/return lifecycle, use [Pool](https://github.com/switon-php/pool/blob/main/docs/README.md).
 
 ## Runtime Behavior {#runtime-behavior}
 

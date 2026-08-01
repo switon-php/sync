@@ -44,7 +44,7 @@ $wg->done();
 $wg->wait();
 ```
 
-Docs: https://docs.switon.dev/latest/sync
+Docs: https://github.com/switon-php/sync/blob/main/docs/README.md
 
 ## License
 

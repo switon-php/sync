@@ -111,7 +111,7 @@ Useful check: `count()`.
 - `pop()` returns the newest item first.
 - `pop($timeout)` can wait in coroutine mode and returns `false` on timeout.
 
-Use `Stack` when newest-first reuse is the right fit. If you need borrow/return lifecycle, use [Pool](../../pool/docs/README.md) instead.
+Use `Stack` when newest-first reuse is the right fit. If you need borrow/return lifecycle, use [Pool](https://github.com/switon-php/pool/blob/main/docs/README.md) instead.
 
 ---
 
@@ -130,4 +130,4 @@ Use `Stack` when newest-first reuse is the right fit. If you need borrow/return 
 
 - **Need setup questions answered quickly:** [FAQ](faq.md#sync-faq)
 - **Need design trade-offs:** [Design Rationale](design.md#design-rationale)
-- **Need borrow/return pooling:** [Pool Package](../../pool/docs/README.md)
+- **Need borrow/return pooling:** [Pool Package](https://github.com/switon-php/pool/blob/main/docs/README.md)
